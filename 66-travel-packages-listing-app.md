@@ -304,12 +304,15 @@ Navigating to `http://localhost:8081`:
 - **Password**: `danish_secure_pass_123`
 - **Database**: `travel_db`
 
-Enables visual management of records, schema inspection, and live SQL execution.
+Enables visual management of records, schema inspection, and live SQL execution:
+
+![Adminer PostgreSQL Table Inspection](assets/adminer-dashboard.png)
+*Live visual inspection of the `destinations` table in Adminer connected to PostgreSQL 15 over `travel-network`.*
 
 ### 3. Application UI Showcase
 
 ![Jannat-e-Kashmir Live Interface](assets/app-preview.png)
-*Live interactive Kashmir Travel booking experience orchestrated with Docker Compose.*
+*Live interactive Kashmir Travel booking experience orchestrated with Docker Compose and Apache/PHP 8.2.*
 
 ---
 

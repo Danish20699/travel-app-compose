@@ -59,8 +59,13 @@ A production-grade, multi-tier travel packages listing and reservation applicati
 
 ## 🎨 Application Showcase
 
+### 1. 🏔️ Kashmir Travel Luxury Experience (`http://localhost:8085`)
 ![Jannat-e-Kashmir Travel Platform](assets/app-preview.png)
-*Live multi-container Kashmir Travel experience running on Apache/PHP 8.2 and PostgreSQL 15 orchestrated with Docker Compose.*
+*Live multi-container Kashmir Travel experience running on Apache/PHP 8.2 with custom golden vector crest and dynamic PDO queries.*
+
+### 2. 🗄️ Adminer Database Management Console (`http://localhost:8081`)
+![Adminer PostgreSQL Database Console](assets/adminer-dashboard.png)
+*Adminer 6.1.0 visual database management interface showing live `destinations` table in PostgreSQL 15.*
 
 ---
 
