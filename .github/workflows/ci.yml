@@ -1,0 +1,22 @@
+name: Validate Docker Compose & Schema
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Validate Docker Compose Configuration
+        run: |
+          echo "Copying sample environment..."
+          cp .env.example .env
+          echo "Validating docker-compose.yml syntax..."
+          docker compose config
+          echo "Validation successful!"
