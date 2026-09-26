@@ -14,8 +14,7 @@ EXPOSE 80
 ENV DB_HOST=travel-db \
     DB_PORT=5432 \
     POSTGRES_DB=travel_db \
-    POSTGRES_USER=danish \
-    POSTGRES_PASSWORD=danish_secure_pass_123
+    POSTGRES_USER=danish
 
 # Copy application source code into Apache document root
 COPY ./src /var/www/html

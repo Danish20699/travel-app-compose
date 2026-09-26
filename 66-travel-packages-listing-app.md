@@ -103,7 +103,7 @@ DB_HOST=travel-db
 DB_PORT=5432
 POSTGRES_DB=travel_db
 POSTGRES_USER=danish
-POSTGRES_PASSWORD=danish_secure_pass_123
+POSTGRES_PASSWORD=your_secure_password_here
 ```
 
 The `.gitignore` strictly protects `.env`:
@@ -300,9 +300,9 @@ SELECT id, title, price, duration FROM destinations LIMIT 3;
 Navigating to `http://localhost:8081`:
 - **System**: PostgreSQL
 - **Server**: `travel-db`
-- **Username**: `danish`
-- **Password**: `danish_secure_pass_123`
-- **Database**: `travel_db`
+- **Username**: `${POSTGRES_USER}` *(from `.env`)*
+- **Password**: `${POSTGRES_PASSWORD}` *(from `.env`)*
+- **Database**: `${POSTGRES_DB}` *(from `.env`)*
 
 Enables visual management of records, schema inspection, and live SQL execution:
 

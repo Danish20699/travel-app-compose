@@ -155,9 +155,9 @@ travel-adminer-service   adminer:latest                  "entrypoint.sh docke…
 | :--- | :--- |
 | **System** | `PostgreSQL` |
 | **Server** | `travel-db` *(Docker internal DNS hostname)* |
-| **Username** | `danish` *(from `.env`)* |
-| **Password** | `danish_secure_pass_123` *(from `.env`)* |
-| **Database** | `travel_db` *(from `.env`)* |
+| **Username** | `${POSTGRES_USER}` *(configured in `.env`)* |
+| **Password** | `${POSTGRES_PASSWORD}` *(configured in `.env`)* |
+| **Database** | `${POSTGRES_DB}` *(configured in `.env`)* |
 
 ---
 
