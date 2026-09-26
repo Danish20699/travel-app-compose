@@ -28,7 +28,7 @@ CREATE TABLE bookings (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 3. Insert Authentic Kashmir Tour Packages
+-- 3. Insert Authentic Kashmir Tour Packages with Verified Photography
 INSERT INTO destinations (name, location, duration, price, category, rating, image_url, description) VALUES
 (
     'Gulmarg Gondola & Ski Paradise',
@@ -37,7 +37,7 @@ INSERT INTO destinations (name, location, duration, price, category, rating, ima
     18500.00,
     'Winter Sports',
     4.9,
-    'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=800&q=80',
     'Experience world-class skiing, ride the legendary Kongdoori & Apharwat Gondola Phase 2, and stay in cozy alpine pine luxury resorts.'
 ),
 (
@@ -57,7 +57,7 @@ INSERT INTO destinations (name, location, duration, price, category, rating, ima
     15000.00,
     'Valleys & Meadows',
     4.9,
-    'https://images.unsplash.com/photo-1626014303757-646c2049c30f?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
     'Walk through evergreen pine forests of Betaab Valley, visit Aru Valley, trek Baisaran Mini-Switzerland, and experience Lidder River rafting.'
 ),
 (
@@ -67,7 +67,7 @@ INSERT INTO destinations (name, location, duration, price, category, rating, ima
     14000.00,
     'Alpine Treks',
     4.7,
-    'https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=800&q=80',
     'Hike to the mighty Thajiwas Glacier, drink crystal-clear mountain water from the Sindh River, and camp under starry Himalayan skies.'
 ),
 (
@@ -77,7 +77,7 @@ INSERT INTO destinations (name, location, duration, price, category, rating, ima
     9500.00,
     'Valleys & Meadows',
     4.8,
-    'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80',
+    'https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=800&q=80',
     'Escape into untouched serenity. Lush velvet rolling meadows, cold foaming Shaliganga river waters, and pure alpine tranquility.'
 ),
 (

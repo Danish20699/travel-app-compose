@@ -737,222 +737,250 @@ function searchUrl(string $query): string
         .filter {
             flex: 0 0 auto;
 
-            padding: 10px 17px;
+            padding: 9px 18px;
 
-            border: 1px solid var(--stone-200);
+            border: 1px solid #DCE5DF;
 
-            border-radius: 999px;
+            border-radius: 8px;
 
             background: white;
 
-            color: var(--stone-700);
+            color: #3B4E47;
 
             text-decoration: none;
 
             font-size: 13px;
             font-weight: 600;
 
-            transition: all var(--transition);
+            transition: all 0.2s ease;
         }
 
         .filter:hover {
-            border-color: var(--forest-600);
-            color: var(--forest-800);
+            border-color: #16322A;
+            color: #16322A;
+            background: #F8FAF8;
         }
 
         .filter.active {
-            background: var(--forest-800);
-            border-color: var(--forest-800);
-            color: white;
+            background: #16322A;
+            border-color: #16322A;
+            color: #F6C479;
         }
 
         /* ================================================================
-           PACKAGE GRID
+           PACKAGE GRID & CARDS (BESPOKE EDITORIAL DESIGN)
         ================================================================ */
 
         .packages-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, minmax(0, 1fr));
-
-            gap: 24px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 28px;
         }
 
         .package-card {
-            background: white;
-
-            border: 1px solid var(--stone-200);
-
-            border-radius: var(--radius-lg);
-
+            background: #FFFFFF;
+            border: 1px solid #E5EBE6;
+            border-radius: 16px;
             overflow: hidden;
-
-            box-shadow: var(--shadow-sm);
-
-            transition:
-                transform var(--transition),
-                box-shadow var(--transition);
+            box-shadow: 0 4px 20px rgba(16, 42, 36, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.25s ease;
         }
 
         .package-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(16, 42, 36, 0.08);
+            border-color: #CBD8CE;
         }
 
         .package-image {
             position: relative;
-
-            height: 270px;
-
+            height: 240px;
             overflow: hidden;
-
-            background: var(--stone-200);
+            background: #EBEFEA;
         }
 
         .package-image img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
-            transition: transform 500ms ease;
+            transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .package-card:hover .package-image img {
-            transform: scale(1.04);
+            transform: scale(1.05);
+        }
+
+        .package-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(16, 42, 36, 0.15) 0%, rgba(16, 42, 36, 0) 40%, rgba(16, 42, 36, 0.45) 100%);
+            pointer-events: none;
         }
 
         .category-badge {
             position: absolute;
-            left: 16px;
-            top: 16px;
-
-            padding: 7px 11px;
-
-            border-radius: 999px;
-
-            background: rgba(16,42,36,.82);
-            color: white;
-
-            backdrop-filter: blur(10px);
-
-            font-size: 10px;
-            font-weight: 800;
-
+            left: 14px;
+            top: 14px;
+            padding: 5px 11px;
+            border-radius: 6px;
+            background: rgba(16, 42, 36, 0.85);
+            color: #F6C479;
+            backdrop-filter: blur(8px);
+            font-size: 10.5px;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: .7px;
+            letter-spacing: 0.8px;
+            border: 1px solid rgba(246, 196, 121, 0.25);
         }
 
-        .rating {
+        .duration-badge {
             position: absolute;
-            right: 16px;
-            top: 16px;
-
-            padding: 7px 10px;
-
-            border-radius: 999px;
-
-            background: white;
-
-            color: var(--stone-900);
-
-            font-size: 12px;
-            font-weight: 800;
+            left: 14px;
+            bottom: 12px;
+            padding: 4px 9px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.92);
+            color: #16322A;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            backdrop-filter: blur(6px);
         }
 
         .package-body {
-            padding: 22px;
+            padding: 22px 22px 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
-        .package-location {
-            color: var(--stone-500);
-
-            font-size: 12px;
+        .package-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 11.5px;
+            color: #6C7A74;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
 
-            margin-bottom: 7px;
+        .meta-dot {
+            color: #A3B2AA;
+        }
+
+        .package-rating {
+            color: #B87A28;
+            font-weight: 700;
         }
 
         .package-title {
-            color: var(--forest-900);
-
-            font-family: 'DM Serif Display', serif;
-
-            font-size: 28px;
-            line-height: 1.1;
-
-            margin-bottom: 10px;
+            color: #142E25;
+            font-family: 'DM Serif Display', Georgia, serif;
+            font-size: 21px;
+            line-height: 1.25;
+            margin: 0 0 10px 0;
+            font-weight: 400;
         }
 
         .package-description {
-            color: var(--stone-500);
+            color: #556660;
+            font-size: 13.5px;
+            line-height: 1.6;
+            margin: 0 0 16px 0;
+            flex-grow: 1;
+        }
 
-            font-size: 13px;
-            line-height: 1.65;
-
-            min-height: 64px;
-
+        .package-perks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
             margin-bottom: 20px;
+        }
+
+        .perk-tag {
+            background: #F1F5F2;
+            color: #234339;
+            border: 1px solid #DCE5DF;
+            font-size: 11px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+            letter-spacing: 0.2px;
         }
 
         .package-footer {
             display: flex;
-            align-items: end;
+            align-items: center;
             justify-content: space-between;
-
-            padding-top: 18px;
-
-            border-top: 1px solid var(--stone-200);
+            padding-top: 16px;
+            border-top: 1px solid #EBEFEA;
+            margin-top: auto;
         }
 
-        .price-label {
-            display: block;
+        .price-box {
+            display: flex;
+            flex-direction: column;
+        }
 
-            color: var(--stone-500);
-
+        .price-prefix {
             font-size: 10px;
-            font-weight: 700;
-
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: .8px;
+            letter-spacing: 0.8px;
+            color: #798781;
         }
 
-        .price {
-            color: var(--forest-800);
-
+        .price-val {
+            color: #142E25;
             font-size: 22px;
             font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
         }
 
-        .price small {
-            color: var(--stone-500);
-
+        .price-suffix {
             font-size: 11px;
+            color: #798781;
             font-weight: 500;
         }
 
         .book-btn {
-            border: 0;
-
-            background: var(--forest-800);
-            color: white;
-
-            padding: 11px 17px;
-
-            border-radius: 999px;
-
+            border: 1px solid rgba(22, 50, 42, 0.2);
+            background: #16322A;
+            color: #F6C479;
+            padding: 10px 18px;
+            border-radius: 8px;
             cursor: pointer;
-
-            font-size: 12px;
+            font-size: 12.5px;
             font-weight: 700;
-
-            transition: all var(--transition);
+            letter-spacing: 0.3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
         }
 
         .book-btn:hover {
-            background: var(--forest-700);
+            background: #0E221C;
+            color: #FFFFFF;
+            border-color: #F6C479;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(22, 50, 42, 0.2);
+        }
+
+        .btn-arrow {
+            transition: transform 0.25s ease;
+        }
+
+        .book-btn:hover .btn-arrow {
+            transform: translateX(3px);
         }
 
         /* ================================================================
@@ -1904,6 +1932,18 @@ function searchUrl(string $query): string
 
         <?php else: ?>
 
+            <?php
+            $highlightsMap = [
+                1 => ['Phase 2 Gondola Pass', 'Apharwat Ski Trail', 'Pine Resort Stay'],
+                2 => ['Heritage Cedar Houseboat', 'Private Sunset Shikara', 'Wazwan Dinner'],
+                3 => ['Betaab & Aru Valley', 'Baisaran Meadow Walk', 'Lidder River Trail'],
+                4 => ['Thajiwas Glacier Trek', 'Sindh River Camp', 'Mountain Guide'],
+                5 => ['Shaliganga Stream Walk', 'Virgin Pine Forest', 'Alpine Meadow Trails'],
+                6 => ['Habba Khatoon Peak', 'Kishanganga River Valley', 'Dawar Heritage Stay'],
+                7 => ['7 Alpine Lakes Circuit', 'Nichnai & Gadsar Passes', 'Camping Gear Included'],
+            ];
+            ?>
+
             <?php foreach ($destinations as $dest): ?>
 
                 <article class="package-card">
@@ -1916,12 +1956,14 @@ function searchUrl(string $query): string
                             loading="lazy"
                         >
 
+                        <div class="package-image-overlay"></div>
+
                         <span class="category-badge">
                             <?= e($dest['category']) ?>
                         </span>
 
-                        <span class="rating">
-                            ★ <?= e($dest['rating']) ?>
+                        <span class="duration-badge">
+                            <?= e($dest['duration']) ?>
                         </span>
 
                     </div>
@@ -1929,10 +1971,10 @@ function searchUrl(string $query): string
 
                     <div class="package-body">
 
-                        <div class="package-location">
-                            📍 <?= e($dest['location']) ?>
-                            ·
-                            <?= e($dest['duration']) ?>
+                        <div class="package-meta">
+                            <span class="package-loc"><?= e($dest['location']) ?></span>
+                            <span class="meta-dot">·</span>
+                            <span class="package-rating">★ <?= e($dest['rating']) ?></span>
                         </div>
 
                         <h3 class="package-title">
@@ -1943,22 +1985,20 @@ function searchUrl(string $query): string
                             <?= e($dest['description']) ?>
                         </p>
 
+                        <?php if (!empty($highlightsMap[$dest['id']])): ?>
+                            <div class="package-perks">
+                                <?php foreach ($highlightsMap[$dest['id']] as $perk): ?>
+                                    <span class="perk-tag"><?= e($perk) ?></span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
+
                         <div class="package-footer">
 
-                            <div>
-
-                                <span class="price-label">
-                                    Starting from
-                                </span>
-
-                                <div class="price">
-                                    ₹<?= number_format((float) $dest['price']) ?>
-
-                                    <small>
-                                        / person
-                                    </small>
-                                </div>
-
+                            <div class="price-box">
+                                <span class="price-prefix">From</span>
+                                <span class="price-val">₹<?= number_format((float) $dest['price']) ?></span>
+                                <span class="price-suffix">/ traveler</span>
                             </div>
 
                             <button
@@ -1969,7 +2009,7 @@ function searchUrl(string $query): string
                                     <?= json_encode($dest['name']) ?>
                                 )'
                             >
-                                Book journey →
+                                Reserve Tour <span class="btn-arrow">→</span>
                             </button>
 
                         </div>
