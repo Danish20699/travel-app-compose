@@ -6,7 +6,7 @@ pipeline {
         VM_USER         = "verjenkins"
         STAGING_IP      = "192.168.56.101"
         PROD_IP         = "192.168.56.102"
-        DOCKER_CREDS_ID = "dockerhub-creds"
+        DOCKER_CREDS_ID = "docker-hub-pat"
         SSH_CREDS_ID    = "vm-ssh-key"
         TAG             = "v${env.BUILD_NUMBER}"
         APP_NAME        = "travel-app"
